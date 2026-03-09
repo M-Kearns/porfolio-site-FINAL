@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Kearns</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        :root {
+            --bg-color: #0f1016; /* Deep dark blue/gray */
+            --card-bg: #1a1c23;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0b0;
+            /* Vibrant Gradients */
+            --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            --hover-gradient: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* === NAVIGATION === */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            background-color: rgba(15, 16, 22, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4facfe;
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            text-align: center;
+            padding: 8rem 5% 6rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: var(--hover-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            background: var(--accent-gradient);
+            color: #121212;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        /* === PORTFOLIO GRID === */
+        .portfolio {
+            padding: 4rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Project Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* The Image Block */
+        .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        /* The Overlay that slides up on hover */
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-overlay {
+            transform: translateY(0);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .card-tags {
+            font-size: 0.85rem;
+            color: #00f2fe;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Michael Kearns</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1> Designing The <span>Future</span></h1>
+        <p>Hi, I'm a creative developer and designer. Welcome to my portfolio where I showcase my favorite projects, experiments, and visual creations.</p>
+        <a href="#work" class="btn">View My Work</a>
+    </section>
+
+    <section class="portfolio" id="work">
+        <h2 class="section-title">Selected Projects</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Retro Gaming Project" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-title">Retro Console Emulator</h3>
+                    <p class="card-tags">C++ / Graphics / UI</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Abstract 3D Art" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-title">Abstract 3D Renders</h3>
+                    <p class="card-tags">Blender / Cinema4D</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Dashboard" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-title">FinTech Dashboard</h3>
+                    <p class="card-tags">React / D3.js / CSS Grid</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Code Concept" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-title">Open Source Python Tool</h3>
+                    <p class="card-tags">Python / Automation</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mobile App" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-title">Habit Tracker App</h3>
+                    <p class="card-tags">Swift / iOS / UI Design</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cyberpunk Setup" class="card-img">
+                <div class="card-overlay">
+                    <h3 class="card-title">Cyberpunk UI Kit</h3>
+                    <p class="card-tags">Figma / Web Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's build something together.</h2>
+        <p style="margin-top: 1rem;"><a href="mailto:mikey" style="color: #00f2fe; text-decoration: none;">kearnsmichael3103@gmail.com
+</a></p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
