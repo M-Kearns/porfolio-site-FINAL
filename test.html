@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<style>
+/* Centers the slider on the page for demonstration purposes */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 250px; /* Adjust based on your image heights */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+
+/* Fading gradient edges for a professional look */
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* Allows users to still hover/click images under the gradient */
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+  /* 300px (slide width) * 10 (total slides) */
+  width: calc(300px * 10);
+  animation: scroll 20s linear infinite;
+}
+
+/* Pauses the animation when the user hovers over the track */
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 300px; /* Fixed width for each slide */
+  padding: 0 15px; /* Creates spacing between images */
+  transition: transform 0.3s ease;
+}
+
+/* Optional: slight zoom effect when hovering an image */
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures images don't stretch weirdly */
+  border-radius: 8px;
+}
+
+/* The Animation Engine */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate left by the width of the original 5 slides (300px * 5) */
+    transform: translateX(calc(-300px * 5));
+  }
+}
+</style>
+  </head>
+
+  <body>
+<div class="slider-container">
+  <div class="slider-track">
+    
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Image+1" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Image+2" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Image+3" alt="Image 3">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/FDCB6E/FFFFFF?text=Image+4" alt="Image 4">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/6C5CE7/FFFFFF?text=Image+5" alt="Image 5">
+    </div>
+
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Image+1" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Image+2" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Image+3" alt="Image 3">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/FDCB6E/FFFFFF?text=Image+4" alt="Image 4">
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x200/6C5CE7/FFFFFF?text=Image+5" alt="Image 5">
+    </div>
+
+  </div>
+</div>
+</body>
+
+</hrml>
