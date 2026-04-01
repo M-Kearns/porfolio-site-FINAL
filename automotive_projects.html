@@ -5,6 +5,93 @@
     <title>Michael Kearns Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+	<style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+
+
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+
+  width: calc(300px * 10);
+  animation: scroll 20s linear infinite;
+}
+
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 300px; 
+  padding: 0 15px; 
+  transition: transform 0.3s ease;
+}
+
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+  
+    transform: translateX(calc(-300px * 5));
+  }
+}
+</style>
    </head>
 <body>
 
@@ -23,13 +110,6 @@
 	<a href="#Formula" class="btn">Formula concept car</a>
 	<a href="#Other" class="btn">other</a>
     </section>
-
-<div class="scroll-container">
-  <img src="img_5terre.jpg" alt="Cinque Terre">
-  <img src="img_forest.jpg" alt="Forest">
-  <img src="img_lights.jpg" alt="Northern Lights">
-  <img src="img_mountains.jpg" alt="Mountains">
-</div>
 	
     <section class="portfolio" id="V12">
         <h2 class="section-title">V12 Project</h2>
@@ -59,27 +139,42 @@
 	
 <section class="portfolio" id="Formula">
         <h2 class="section-title">Formula car</h2>
-		 <div class="grid">
-           	 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-			<div class="card">
-				<img src="large_assembly.png" alt="V12 Project" class="card-img">
-             	   <div class="card-overlay">
-                  	  <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-				 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-            </div>
-		</div>
-
+		 
+<div class="slider-container">
+  <div class="slider-track">
+    
+    <div class="slide">
+      <img src="ss1" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="ss1" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="ss1.png" alt="Image 1">
+    </div>
+  </div>
+</div>
 
     </section>
 
