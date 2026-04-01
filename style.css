@@ -213,17 +213,5 @@
             max-width: 600px; 
             text-align: center;
                
-                body, html {
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* Forces the body to take up the full viewport height */
-            background-color: #f0f2f5; 
-            font-family: system-ui, -apple-system, sans-serif;
-
-            /* 2. Flexbox Centering Magic */
-            display: flex;
-            justify-content: center; /* Centers items horizontally */
-            align-items: center;     /* Centers items vertically */
-        }
 
     </style>
