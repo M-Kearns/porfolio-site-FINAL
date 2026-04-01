@@ -212,7 +212,9 @@
             width: 100%;
             max-width: 600px; 
             text-align: center;
-               .faq-dropdown {
+              
+                
+        .drop {
             background-color: #f9f9f9;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
@@ -223,7 +225,7 @@
         }
 
         /* The clickable heading */
-        .faq-dropdown summary {
+        .drop summary {
             font-size: 16px;
             font-weight: bold;
             color: #333;
@@ -235,12 +237,12 @@
         }
 
         /* Hides the default triangle in Safari/Chrome */
-        .faq-dropdown summary::-webkit-details-marker {
+        .drop summary::-webkit-details-marker {
             display: none;
         }
 
         /* Adding a custom '+' icon using CSS */
-        .faq-dropdown summary::after {
+        .drop summary::after {
             content: '+';
             font-size: 20px;
             color: #666;
@@ -248,12 +250,12 @@
         }
 
         /* Change the '+' to an 'x' or rotate it when open */
-        .faq-dropdown[open] summary::after {
+        .drop[open] summary::after {
             transform: rotate(45deg);
         }
 
         /* The hidden content inside */
-        .faq-dropdown p {
+        .drop p {
             margin-top: 15px;
             margin-bottom: 0;
             line-height: 1.6;
@@ -261,6 +263,8 @@
             border-top: 1px solid #ddd;
             padding-top: 15px;
         }
+
+                
         hr.gradient {
             border: none;
             height: 1px;
