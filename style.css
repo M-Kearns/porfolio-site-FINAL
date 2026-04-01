@@ -205,6 +205,7 @@ text-align: center;
 }
 
 .box2 {
+text-align: center;
   border: 2px solid black;   /* Creates the outline */
   padding: 20px;             /* Space between text and border */
   background-color: #f0f0f0; /* Fills the box with color */
