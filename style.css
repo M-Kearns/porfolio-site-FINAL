@@ -207,7 +207,8 @@
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft drop shadow */
                 border: 2px solid black;   
-       
+                justify-content: center; /* Centers items horizontally */
+            align-items: center;     /* Centers items vertically */
             width: 100%;
             max-width: 600px; 
             
