@@ -216,7 +216,7 @@
         hr.gradient2 {
             border: none;
             height: 2px;
-            background: linear-gradient(to right, transparent, #888, transparent);
+            background: linear-gradient(to right, transparent, #ffffff, transparent);
             margin: 80px 0;
   }
     </style>
