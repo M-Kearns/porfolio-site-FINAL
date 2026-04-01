@@ -212,13 +212,5 @@
             width: 100%;
             max-width: 600px; 
             text-align: center;
-                
-        hr.short {
-    border: none;
-    border-top: 3px solid #333; /* Thicker, darker line */
-    width: 50px; /* Keeps the line short */
-    margin: 40px auto; /* 'auto' automatically centers the line */
-    border-radius: 5px; /* Rounds the edges of the line slightly */
-  }
   }
     </style>
