@@ -203,4 +203,12 @@
 .imagecenter {
 text-align: center;
 }
+
+.box2 {
+  border: 2px solid black;   /* Creates the outline */
+  padding: 20px;             /* Space between text and border */
+  background-color: #f0f0f0; /* Fills the box with color */
+  width: 300px;              /* Sets the width */
+  border-radius: 8px;        /* Optional: Rounds the corners */
+}
     </style>
