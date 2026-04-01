@@ -201,8 +201,9 @@
             nav { flex-direction: column; gap: 1rem; }
         }
 .imagecenter {
-  display: grid;
-  place-items: center; /* Centers both horizontally and vertically */
-  height: 100vh;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           /* Optional: sets container to full screen height */
 }
     </style>
