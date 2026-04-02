@@ -5,6 +5,85 @@
     <title>Michael Kearns Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+	<style>
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+
+
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+
+  width: calc(300px * 10);
+  animation: scroll 20s linear infinite;
+}
+
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 300px; 
+  padding: 0 15px; 
+  transition: transform 0.3s ease;
+}
+
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+  
+    transform: translateX(calc(-300px * 5));
+  }
+}
+</style>
    </head>
 <body>
 
@@ -16,92 +95,87 @@
         </ul>
     </nav>
 
-    <section class="hero" id="home">
-        <h1><span>Everyday Objects</span></h1>
-        <p>These are a small collection of some of the projects I have made in the realm of automotive design.</p>
-        <a href="#V12" class="btn">V12 Project</a>
-	<a href="#Formula" class="btn">Formula concept car</a>
-	<a href="#Other" class="btn">other</a>
-    </section>
-
-    <section class="portfolio" id="V12">
-        <h2 class="section-title">V12 Project</h2>
-     	   <div class="grid">
-           	 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-			<div class="card">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YUf_saaaOss?si=v4BcJT-r8yvmogJb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-				 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-            </div>
-			 
-		</div>
+  <section class="hero">
+        <h1><span>Everyday Objects</span></h1>    
+	  <Hr style= "margin-top: 100px">
+	<h3 class="box2" style="width: 1000px; margin: 0 auto; text-align: center; padding: 20px; border: 3px solid #ccc; background-color: #f9f9f9; margin-top: 100px;">
+		These projects display the more simplistic but functional design processes I have used. These models are specifically designed around FDM manufacturing or injection molded production and all the various challenges that need to be navigated while creating projects with the intention of production.  </h3>
 	</section>
-
 	
-<section class="portfolio" id="Formula">
-        <h2 class="section-title">Formula car</h2>
-		 <div class="grid">
-           	 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-			<div class="card">
-				<img src="large_assembly.png" alt="V12 Project" class="card-img">
-             	   <div class="card-overlay">
-                  	  <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-				 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-            </div>
-		</div>
+    <section>
+        <h2 class="section-title">Decorative objects</h2>         
+<div class="slider-container">
+  <div class="slider-track">
+    
+    <div class="slide">
+      <img src="Screenshot 2026-04-01 034912.png" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="top.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="bottom.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="large_assembly.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="Screenshot 2026-04-01 034912.png" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="top.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="bottom.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="large_assembly.png" alt="Image 1">
+    </div>
+	  </div>
+  </div>
+</div>
 
-
+	</section>
+	
+	<hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #444, transparent); margin: 40px 0;">
+		
+	<section>
+        <h2 class="section-title">Functional Objects</h2>
+	
+<div class="slider-container">
+  <div class="slider-track">
+    
+    <div class="slide">
+      <img src="Senna1.png" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="Untitled Project (2).png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="Untitled Project (3).png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="Untitled Project (4)_Camera_Default Camera.png" alt="Image 1">
+    </div>
+     <div class="slide">
+      <img src="senna.png" alt="Image 1">
+    </div>
+	  <div class="slide">
+      <img src="senna 5.png" alt="Image 1">
+    </div>
+	  <div class="slide">
+      <img src="senna3.png" alt="Image 1">
+    </div>
+	  <div class="slide">
+      <img src="senna 6.png" alt="Image 1">
+    </div>
+	  </div>
+  </div>
+</div>
     </section>
 
-
-<section class="portfolio" id="Other">
-        <h2 class="section-title">other</h2>
-			<div class="grid">
-           	 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-			<div class="card">
-				<img src="large_assembly.png" alt="V12 Project" class="card-img">
-             	   <div class="card-overlay">
-                  	  <h3 class="card-title">V12 Engine</h3>
-                </div>
-			</div>
-				 <div class="card">
-                <img src="large_assembly.png" alt="V12 Project" class="card-img">
-                <div class="card-overlay">
-                    <h3 class="card-title">V12 Engine</h3>
-                </div>
-            </div> 
-		</div>
-
-
     </section>
+	<Hr>
 
      <footer id="contact">
         <h2>Let's build something together.</h2>
